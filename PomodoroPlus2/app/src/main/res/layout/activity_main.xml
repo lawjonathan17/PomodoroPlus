@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.lawjonathan.pomodoroplus.MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/tomato"
+        android:src="@drawable/tomato"
+        android:layout_above="@+id/gridLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/time"
+        android:textColor="#ffffff"
+        android:textSize="54sp"
+        android:layout_marginBottom="118dp"
+        android:text="25:00"
+        android:textStyle="bold|italic"
+        android:layout_above="@+id/gridLayout"
+        android:layout_centerHorizontal="true" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/gridLayout">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start"
+            android:id="@+id/startButton"
+            android:layout_marginBottom="90dp"
+            android:onClick="start"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:layout_columnWeight="1"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pause"
+            android:id="@+id/pauseButton"
+            android:layout_below="@+id/tomato"
+            android:layout_centerHorizontal="true"
+            android:layout_column="1"
+            android:layout_row="0"
+            android:layout_columnWeight="1"
+            android:onClick="pauseAndResume" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reset"
+            android:id="@+id/resetButton"
+            android:layout_column="2"
+            android:layout_row="0"
+            android:layout_columnWeight="1"
+            android:onClick="reset" />
+    </GridLayout>
+
+</RelativeLayout>
